@@ -1,61 +1,21 @@
-<<<<<<< HEAD
-csn-da22tta-phamhuuluan-book_selling_web-django
-Django ebook-store
+# csn-da22tta-phamhuuluan-book_selling_web-django
+# Django ebook-store
 Ứng dụng web bán sách được xây dựng bằng Django 5, MySQL và Bootstrap 5.
+
 Ứng dụng này cũng sử dụng một số gói bổ sung như:
 
 django-crispy-forms
+
 django-filter
+
 pillow
+
 easy-thumbnails
+
 dj-database-url
+
 Trong ứng dụng này, quản trị viên có thể quản lý sản phẩm và đơn hàng, trong khi khách hàng có thể đăng ký tài khoản, thêm sản phẩm vào giỏ hàng,...
 
-Hướng dẫn chạy ứng dụng trên máy tính cá nhân
-Cài đặt các thư viện cần thiết:
-Chạy lệnh sau trong terminal:
-
-bash
-Sao chép mã
-pip install -r requirements.txt  
-Tạo tài khoản quản trị (superuser):
-Chạy lệnh:
-
-bash
-Sao chép mã
-python manage.py createsuperuser  
-Sau đó nhập tên đăng nhập, email và mật khẩu của bạn.
-
-Thực hiện di chuyển dữ liệu (migrate):
-bash
-Sao chép mã
-python manage.py migrate  
-Khởi động server:
-bash
-Sao chép mã
-python manage.py runserver  
-Truy cập ứng dụng:
-Sau khi khởi động server, mở trình duyệt và truy cập http://localhost:8000/ để vào ứng dụng chính.
-Để truy cập module quản trị, truy cập http://localhost:8000/admin và đăng nhập bằng tài khoản quản trị vừa tạo.
-=======
-# 📚 CSN-DA22TTA-PhamHuuLuan-BookSellingWeb
-# Django Ebook Store
-
-Ứng dụng web bán sách được xây dựng bằng Django 5, MySQL và Bootstrap 5.
-
-Ứng dụng này cũng sử dụng một số gói bổ sung như:
-
-django-crispy-forms
-
-django-filter
-
-pillow
-
-easy-thumbnails
-
-dj-database-url
-
-Trong ứng dụng này, quản trị viên có thể quản lý sản phẩm và đơn hàng, trong khi khách hàng có thể đăng ký tài khoản, thêm sản phẩm vào giỏ hàng, và nhiều chức năng khác.
 
 # 🚀 Cách chạy chương trình
 
@@ -99,20 +59,6 @@ python manage.py runserver
 Ứng dụng chính: Truy cập http://localhost:8000/
 Module quản trị: Truy cập http://localhost:8000/admin và đăng nhập bằng tài khoản quản trị vừa tạo.
 
-# 📂 Cấu trúc thư mục
-
-👤 csn-da22tta-nguyenthanhhieu-loctrungbinh
-
- ├── 📂 setup               # Cài đặt chương trình, dữ liệu thử nghiệm
- ├── 📂 src                 # Chứa mã nguồn xử lý ảnh
- ├── 📂 progress-report     # Báo cáo tiến độ hàng tuần
- ├── 📂 thesis              # Tài liệu đồ án
- │   ├── 📂 doc            # Tài liệu Word
- │   ├── 📂 pdf            # Tài liệu PDF
- │   ├── 📂 abs            # Slide báo cáo (.ppt), video
- │   ├── 📂 refs           # Tài liệu tham khảo
- ├── README.md              # Mô tả tổng quan về đồ án
- ├── .gitignore             # File bỏ qua khi push lên GitHub
 
 
 # 📞 Liên hệ
@@ -120,7 +66,8 @@ Module quản trị: Truy cập http://localhost:8000/admin và đăng nhập b�
 👤 Phạm Hữu Luân
 
 📧 Email: luanphamhuu2004@example.com
-
+  
+📞 Số diện thoại: 0386291762
 📚 Trường Đại học Trà Vinh
 
 
