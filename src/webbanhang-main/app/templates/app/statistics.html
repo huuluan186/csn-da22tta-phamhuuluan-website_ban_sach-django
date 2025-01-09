@@ -1,0 +1,54 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% load humanize %}
+{% block title %}{{ block.super }} - Báo cáo thống kê{% endblock title %}
+{% block load_page %}
+
+<div class="container py-5">
+    <hr class="dashed-line">
+    <h1 class="text-center text-success"><i class="fas fa-chart-line"></i> BÁO CÁO THỐNG KÊ</h1>
+    <hr class="dashed-line">
+
+    <!-- Tổng doanh thu và Tồn kho cùng 1 hàng -->
+    <div class="row pt-5 mb-5">
+        <!-- Tổng Doanh Thu -->
+        <div class="col-md-6">
+            <div class="p-4 border rounded bg-light text-center">
+                <h3 class="text-primary">
+                    <i class="fas fa-dollar-sign"></i> TỔNG DOANH THU: <strong>{{ total_revenue|floatformat:0|intcomma }} VNĐ</strong>
+                </h3>
+            </div>
+        </div>
+
+        <!-- Tồn Kho -->
+        <div class="col-md-6">
+            <div class="p-4 border rounded bg-light text-center">
+                <h3 class="text-warning">
+                    <i class="fas fa-boxes"></i> TỒN KHO: <strong>{{ total_stock }} sản phẩm</strong>
+                </h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top 10 sản phẩm bán chạy -->
+    <div class="pt-5 mb-5">
+        <h3 class="text-info">
+            <i class="fas fa-trophy"></i> Top 10 Sản Phẩm Bán Chạy Nhất
+        </h3>
+        <div class="d-flex justify-content-center align-items-center pt-3">
+            <img src="data:image/png;base64,{{ top_bar_chart }}" alt="Biểu đồ top 10 sản phẩm bán chạy" style="max-width:100%; max-height: 500px;">
+        </div>
+    </div>
+
+    <!-- Sản phẩm tồn kho nhiều nhất -->
+    <div class="pt-5 mb-5">
+        <h3 class="text-danger">
+            <i class="fas fa-archive"></i> Sản Phẩm Tồn Kho Nhiều Nhất
+        </h3>
+        <div class="d-flex justify-content-center align-items-center pt-3">
+            <img src="data:image/png;base64,{{ stock_bar_chart }}" alt="Top tồn kho" style="max-width:100%; max-height: 500px;">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

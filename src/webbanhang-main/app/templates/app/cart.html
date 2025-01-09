@@ -1,0 +1,56 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% load humanize %}
+{% block title %}{{ block.super }} - Giỏ hàng của tôi{% endblock title %}
+{% block cart_content %}
+<div class="container-fluid py-5">
+    <div class="row">
+    	<div class="col-lg-12">
+    		<div class="box-element">
+    
+    			<a  class="btn btn-outline-dark" href="{% url 'home' %}">&#x2190; Tiếp tục mua hàng</a>
+    
+    			<br>
+    			<br>
+    			<table class="table">
+    				<tr>
+    					<th><h5>Tổng sản phẩm: <strong>{{order.get_cart_items}}</strong></h5></th>
+    					<th><h5>Tổng tiền đơn hàng:<strong> {{order.get_cart_value | floatformat:0 |intcomma}} đ</strong></h5></th>
+    					<th>
+    						<a  style="float:right; margin:5px;" class="btn btn-success" href="{% url 'checkout' %}">Thanh toán</a>
+    					</th>
+    				</tr>
+    			</table>
+    		</div>
+    
+    		<br>
+    		<div class="box-element">
+    			<div class="cart-row">
+                    <div style="flex:2"><strong>Sản phẩm</strong></div>
+    				<div style="flex:2"><strong>Hình ảnh</strong></div>
+    				<div style="flex:1"><strong>Giá (vnđ)</strong></div>
+    				<div style="flex:1"><strong>Số lượng</strong></div>
+    				<div style="flex:1"><strong>Tổng tiền sản phẩm (vnđ)</strong></div>
+    			</div>
+    			
+                {% for item in items %}
+                    <div class="cart-row">
+                        <div style="flex:2;padding-right: 10px"><p>{{item.product.name|title}}</p></div>
+                        <div style="flex:2"><img class="row-image" src="{{item.product.ImageURL}}"></div>
+                        <div style="flex:1"><p>{{item.product.price | floatformat:0 |intcomma}}</p></div>
+                        <div style="flex:1">
+                            <p class="quantity">{{item.quantity}}</p>
+                            <div class="quantity">
+                                <img data-product={{item.product.id}} data-action="add" class="chg-quantity update-cart" src="{% static  'app/images/arrow-up.png' %}"  {% if item.product.quantity == 0 %} data-out-of-stock="true"  {% else %} data-out-of-stock="false" {% endif %}>
+                        
+                                <img data-product={{item.product.id}} data-action="remove" class="chg-quantity update-cart" src="{% static  'app/images/arrow-down.png' %}">
+                            </div>
+                        </div>
+                        <div style="flex:1"><p>{{item.get_item_value | floatformat:0 |intcomma}}</p></div>
+                    </div>
+                {% endfor %}
+    		</div>
+    	</div>
+    </div>
+</div>
+{% endblock cart_content %}

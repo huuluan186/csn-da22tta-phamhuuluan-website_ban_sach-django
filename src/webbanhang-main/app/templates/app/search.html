@@ -1,0 +1,26 @@
+{% extends 'app/base.html' %}
+{% load static%}
+{% block title %}{{ block.super }} - Kết quả tìm kiếm{% endblock title %}
+
+{% block load_page %}
+
+    <div class="container keyword-find pt-5">
+        {% if not searched %}
+            <h5>Bạn chưa nhập từ khóa để tìm kiếm.</h5>
+        {% elif not keys %}
+            <h5>Không tìm thấy sản phẩm nào phù hợp với từ khóa "{{ searched }}".</h5>
+        {% else %}
+            <h5>Kết quả tìm kiếm cho: {{ searched }}</h5>
+        {% endif %}
+    </div>
+
+    {% if keys and searched %}
+        <div class="container py-4">
+            <div class="row ">
+                <!-- lặp qua danh sách keys (danh sách các sản phẩm mà đã tìm thấy trong view)-->
+                {% include 'app/partials/product_list.html' with products=keys %} 
+            </div> 
+        </div>
+    {% endif %}    
+{% endblock load_page %}
+

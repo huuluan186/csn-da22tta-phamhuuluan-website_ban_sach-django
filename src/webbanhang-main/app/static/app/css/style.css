@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif+HK:wght@200..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none !important;
+    text-decoration: none !important;
+    font-family: 'Inter', sans-serif;
+}
+body{
+	background-color: #f9f5ee;
+    height: 100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+	color:#4d4d4d;
+}
+
+.card-body .product-name,p{
+    color: inherit;
+}
+.btn-outline-success{
+    color: inherit;
+}
+.no-hover:hover {
+    color: green; /* Không thay đổi màu chữ */
+    background-color: inherit; /* Không thay đổi màu nền */
+    cursor: default; /* Giữ con trỏ mặc định */
+   
+}
+
+/* Định kiểu cho header */
+
+
+.header .navbar {
+    background: linear-gradient(90deg, #85d8ce, #a8e6cf);  /* Đảm bảo navbar có màu nền sáng */
+}
+
+.nav-link {
+    color: #333; /* Màu chữ tối cho các liên kết */
+    font-weight: 500;
+}
+
+.list-group-item.active{
+    background: #f75151 !important;
+    border: 1px solid #f75151  !important;
+}
+
+a.list-group-item:hover{
+    background: #477de7;
+    color: orange;
+    font-weight: bold;
+}
+
+
+
+.nav-item .nav-link:hover {
+    border-radius: 3px;
+    background:  #d4f5e9;
+    font-weight: bold;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    border-radius: 3px;
+    background:  #d4f5e9;
+}
+
+.cart-icon:hover{
+    background:  #d4f5e9;
+}
+
+/* card */
+
+.custom-row{
+    background-color:#fff;
+}
+
+.card .card-img-top {
+    height: 300px;
+}
+
+.category a{
+    color:#323232 !important;
+}
+.cate_name{
+    font-weight: bolder;
+    color: #2475a7;
+    margin-left: -22px;
+}
+
+.card .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Căn chỉnh đều cho các phần tử trong card-body */
+    height: 100%; 
+}
+
+.card-body .btn {
+    padding: 0.4rem 0.8rem; /* Điều chỉnh padding cho các nút nhỏ gọn hơn */
+    font-size: 0.875rem; /* Điều chỉnh kích thước chữ trong nút */
+}
+
+.card-body h6 {
+    height: 48px; /* Đặt chiều cao cố định cho tiêu đề */
+    line-height: 1.4em; /* Điều chỉnh độ cao dòng */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Giới hạn số dòng (ở đây là 2 dòng) */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis; /* Thêm dấu '...' khi nội dung vượt quá */
+}
+
+.card-body p {
+    height: 20px; /* Đặt chiều cao cố định cho phần giá */
+    line-height: 20px; /* Đảm bảo giá nằm giữa chiều cao */
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1; /* Đảm bảo các card không bị chồng lên khi chưa hover */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Tăng kích thước của thẻ khi hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Tạo hiệu ứng bóng mờ */
+    z-index: 2; /* Đảm bảo thẻ hover sẽ nổi lên trên các thẻ khác */
+    background-color: #f2f2f2;
+}
+
+/* footer */
+
+.footer {
+    min-height: 10vh;
+    background: #323232;
+    padding: 32px;
+    color: #676667;
+}
+
+.footer-logo {
+    color: #eee;
+    text-shadow: 0px 1px 1px white;
+    font-weight: 550;
+    font-size: 32px;
+}
+.footer-logo span {
+    color: #ffa500;
+}
+
+.heading-pages {
+    color: #eee;
+    font-size: 28px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.icon-social-footer {
+    font-size: 20px;
+    padding: 8px;
+    border: 1px solid #478ee8;
+    color: #eee;
+    margin: 0 4px;
+    transition: 0.2s ease-in;
+}
+
+.icon-social-footer:hover {
+    background-color: #477de7;
+    color: #ffa500;
+}
+
+.contact-footer .text-contact {
+    margin: 6px 0px;
+    font-size: 15px;
+}
+
+.contact-icon-footer {
+    font-size: 18px;
+    color: #ffa500;
+    padding: 0px 9px;
+}
+
+.copyright {
+    border-top: 1px solid #676667;
+    color: #c9c9c9;
+    text-align: center;
+}
+
+
+
+

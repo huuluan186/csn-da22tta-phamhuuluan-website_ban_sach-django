@@ -1,0 +1,23 @@
+{% load humanize %}
+        {% for product in products %}
+            <div class="{% if is_home_page %}col-lg-4{% else %}col-lg-3{% endif %} col-md-6 col-sm-12 mb-3">
+                <div class="card ">
+                    <a href="#"> <img class="card-img-top" src="{{product.ImageURL}}" alt="Card image cap" /></a>
+                    <div class="card-body">
+                        <h6><a href="#" class="product-name">{{product.name|title}}</a></h6>
+                        <p class="text-center m-3"><strong>{{product.price | floatformat:0|intcomma}} đ</strong></p>
+                        <div class="d-flex justify-content-between gap-2">
+                            <button type="button" data-product={{product.id}} data-action="add" class="btn btn-outline-success update-cart"  {% if product.quantity == 0 %} data-out-of-stock="true"  {% else %} data-out-of-stock="false" {% endif %}>Thêm vào giỏ hàng</button>
+                            <span class="text-center  btn btn-outline-success no-hover">
+                                {% if product.quantity > 0 %}
+                                   Còn lại: {{ product.quantity }}
+                                {% else %}
+                                    <strong class="text-danger">Hết hàng</strong>
+                                {% endif %}
+                            </span>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        {% endfor %}
+    

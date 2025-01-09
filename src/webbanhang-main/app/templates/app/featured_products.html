@@ -1,0 +1,22 @@
+{% extends 'app/base.html' %}
+{% block title %}{{ block.super }} - Sản phẩm nổi bật{% endblock title %}
+{% load static%}
+  
+    {% block load_page %}
+    <div class="container pt-5">
+        <h5><a href="{% url 'home' %}" style="color:#4d4d4d; font-weight:bold">Trang chủ</a>/ Tất cả sản phẩm nổi bật</h5>
+    </div>
+
+    <div class="container py-4">
+        <!-- lặp qua danh sách keys (danh sách các sản phẩm mà đã tìm thấy trong view)-->
+        <div class="col-lg-12 col-md-8 col-sm-12">
+            <div class='row custom-row' >
+                {% include 'app/partials/product_list.html' with products=featured_products %}
+            </div>
+        </div>
+    </div> 
+    <!-- Include phần danh sách sản phẩm nổi bật -->
+    
+ 
+    {% endblock load_page %}
+

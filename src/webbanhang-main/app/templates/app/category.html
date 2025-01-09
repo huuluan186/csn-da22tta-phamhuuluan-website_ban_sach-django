@@ -1,0 +1,20 @@
+{% extends 'app/base.html' %}
+{% load static%}
+{% block title %}Danh mục - {{ active_category_name }}{% endblock title %}
+        
+{% block load_page %}
+        {% if active_category_name %}
+        <div class="container pt-5">
+            <h5><a href="{% url 'home' %}" style="color:#4d4d4d; font-weight:bold">Trang chủ</a> / Danh mục: {{ active_category_name }}</h5>
+        </div>
+        {% endif %}
+        <div class="container py-4">
+            <!-- lặp qua danh sách keys (danh sách các sản phẩm mà đã tìm thấy trong view)-->
+            <div class="col-lg-12 col-md-8 col-sm-12">
+                <div class='row custom-row' >
+                    {% include 'app/partials/product_list.html' with products=products %}
+                </div>
+            </div>
+        </div>        
+{% endblock load_page %}
+
