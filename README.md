@@ -32,8 +32,31 @@ cd csn-da22tta-nguyenthanhhieu-loctrungbinh
 
 Chạy lệnh sau trong terminal:
 
-
 pip install -r requirements.txt  
+
+Mở tệp settings.py của dự án Django và sửa phần DATABASES:
+
+
+DATABASES = {
+
+    'default': {
+
+        'ENGINE': 'django.db.backends.mysql',
+
+        'NAME': 'ten_csdl',  # Tên cơ sở dữ liệu
+
+        'USER': 'ten_user',  # Tên user MySQL
+
+        'PASSWORD': 'mat_khau',  # Mật khẩu của user
+
+        'HOST': 'localhost',  # Máy chủ (local)
+
+        'PORT': '3306',  # Cổng mặc định của MySQL
+
+    }
+
+}
+
 4️⃣ Tạo tài khoản quản trị (superuser)
 
 Chạy lệnh:
