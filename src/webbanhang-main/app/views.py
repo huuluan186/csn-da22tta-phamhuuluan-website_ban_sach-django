@@ -49,7 +49,7 @@ def search(request):
         # Lấy từ khóa tìm kiếm người dùng nhập vào từ form (thường là input có name="searched")
         searched = request.POST["searched"].strip()
         # Tìm kiếm các sản phẩm có tên chứa từ khóa nhập vào (phần 'name__contains' là lọc theo tên sản phẩm)
-        if search:
+        if searched:
             keys = Product.objects.filter(name__iregex=rf"\b{searched}\b") 
     cart_data=get_cart_data(request)
     categories = Category.objects.filter(is_sub=False)  
