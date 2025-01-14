@@ -16,9 +16,6 @@
     				<tr>
     					<th><h5>Tổng sản phẩm: <strong>{{order.get_cart_items}}</strong></h5></th>
     					<th><h5>Tổng tiền đơn hàng:<strong> {{order.get_cart_value | floatformat:0 |intcomma}} đ</strong></h5></th>
-    					<th>
-    						<a  style="float:right; margin:5px;" class="btn btn-success" href="{% url 'checkout' %}">Thanh toán</a>
-    					</th>
     				</tr>
     			</table>
     		</div>
