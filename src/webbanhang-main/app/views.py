@@ -131,14 +131,6 @@ def cart(request):
     return render(request, 'app/cart.html', context)  # Trả về trang 'cart.html' với `context` đã tạo
 
 
-def checkout(request):
-    cart_data=get_cart_data(request)
-    categories = Category.objects.filter(is_sub=False)  
-    context = {**cart_data,'categories':categories}  
-    return render(request,'app/checkout.html',context)
-
-
-
 def statistics_view(request):
     cart_data=get_cart_data(request)
     categories = Category.objects.filter(is_sub=False)   
