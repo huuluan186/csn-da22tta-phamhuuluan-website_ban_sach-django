@@ -18,9 +18,13 @@ def home(request):
     return render(request, 'app/home.html', context)
 
 def featured_products(request):
+    categories_data = get_categories_and_products()
+    cart_data = get_cart_data(request)
     # Lấy các sản phẩm nổi bật
     featured_products= Product.objects.filter(featured=True)
     context = {
+        **categories_data,
+        **cart_data,
         'featured_products': featured_products,
     }
     return render(request, 'app/featured_products.html', context)
