@@ -26,8 +26,7 @@ Yêu cầu Python >=3.8.
 2️⃣ Clone repository về máy
 
 
-git clone https://github.com/nguyenthanhhieu/csn-da22tta-nguyenthanhhieu-loctrungbinh.git  
-cd csn-da22tta-nguyenthanhhieu-loctrungbinh  
+git clone https://github.com/huuluan186/csn-da22tta-phamhuuluan-website_ban_sach-django.git
 3️⃣ Cài đặt các thư viện cần thiết
 
 Chạy lệnh sau trong terminal:
